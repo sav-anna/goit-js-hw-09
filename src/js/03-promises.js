@@ -21,7 +21,7 @@ function onSubmitForm(e) {
   let delayValue = Number(delayEl.value);
   const intervalId = setInterval(() => {
     amountInterval += 1;
-    if (amountEl.value < amountInterval) {
+    if (Number(amountEl.value) < amountInterval) {
       clearInterval(intervalId);
       return;
     }
