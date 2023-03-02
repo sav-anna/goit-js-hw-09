@@ -14,10 +14,12 @@
 
 const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
+let timeColor = null;
 
 startBtn.addEventListener('click', startColorOnBody);
 stopBtn.addEventListener('click', stopColorOnBody);
 stopBtn.disabled = true;
+
 function startColorOnBody() {
   stopBtn.disabled = false;
   timeColor = setInterval(() => {
